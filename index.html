@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="leftside">
-            <h2>FIND YOUR AKAN</h2>
+      <div class="leftside">
+        <h2>FIND YOUR AKAN</h2>
 
-            <!--<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ipsam! Molestias velit aliquam ipsam quasi deleniti? Maiores beatae autem accusantium ut voluptates, soluta quo suscipit facilis expedita vitae voluptatibus possimus.</P>-->
-        </div>
+        <!--<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ipsam! Molestias velit aliquam ipsam quasi deleniti? Maiores beatae autem accusantium ut voluptates, soluta quo suscipit facilis expedita vitae voluptatibus possimus.</P>-->
+      </div>
 
-        <div class="rightside">
-
-            <div class="gender-selector" id="gender-selector">
+      <div class="rightside">
+        <!-- <div class="gender-selector" id="gender-selector">
                  <label for="gender"> Select you gender</label>
                  <select  class="gender" name="gender">
 	                <option value="none" selected>Gender</option>
 	                <option value="male">Male</option>
 	                <option value="female">Female</option>
                 </select>
-            </div>
+            </div> -->
 
-            <h1>Show a Date Control</h1>
-            <div class="birthday-selctor" id="birthday-selector"></div>
+        <h1>Show a Date Control</h1>
+        <div class="form">
+          <form>
+            <label>
+              birth-year <br />
+              <input type="number" name="year" required /> </label
+            ><br />
+
+            <label>
+              birth-month <br />
+              <input type="number" name="month" required /> </label
+            ><br />
+
+            <label>
+              birth-day <br />
+              <input type="number" name="day" required /> </label
+            ><br />
+            <label for="male">male</label>
+            <input type="radio" name="gender" id="male" />
+            <label for="female">female</label>
+            <input type="radio" name="gender" id="female" />
+
+            <button class="submit" onclick="ValidateForm(event)" >submit</button>
+          </form>
+        </div>
+        <!-- <div class="birthday-selctor" id="birthday-selector"></div>
             <form>
                  <label for="birthday">Birthday:</label>
                  <input type="date" id="birthday" name="birthday">
               <a href="#" target="blank"><input onclick="ValidateForm(event)" type="submit"></a>
-            </form>
-           
-       
-
-        </div>
+            </form> -->
+      </div>
     </div>
 
     <script src="main.js  "></script>
-</body>
+  </body>
 </html>
