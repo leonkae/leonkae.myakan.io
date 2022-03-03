@@ -2,7 +2,7 @@
 const yearSelect = document.getElementById("year");
 const monthSelect = document.getElementById("month");
 const daySelect = document.getElementById("day");
-
+const daySelect = document.getElementById("gender-selector");
 const months = [
   "January",
   "February",
