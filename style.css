@@ -27,12 +27,20 @@ body{
 }
 
 .rightside{
+   
     width: 50%;
     text-align: center;
     padding-top: 50px;
     font-size: 30px;
 }
-
+.for{
+     border: 3px solid red;
+     border-radius: 20px;
+     background-image: linear-gradient(olive,dodgerblue);
+     height: 370px;
+     width: 400px;
+     margin-left: 280px;
+}
 form span{
     display: block;
     margin: 20px 0;
