@@ -9,6 +9,7 @@
 .leftside{
     width: 50%;
     height: 1000px;
+    justify-content: center;
     background-color: dodgerblue;
     font-family: 'poppins', sans-serif;
 }
