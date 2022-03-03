@@ -1,22 +1,32 @@
 //Create references to the dropdown's
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+
 const names = {
-    male:{
-        Sunday: "Kwasi",
+  male: {
+    Sunday: "Kwasi",
 
-Monday: "Kwadwo",
+    Monday: "Kwadwo",
 
-Tuesday: "Kwabena",
+    Tuesday: "Kwabena",
 
-Wednesday: "Kwaku",
+    Wednesday: "Kwaku",
 
-Thursday: "Yaw",
+    Thursday: "Yaw",
 
-Friday: "Kofi",
+    Friday: "Kofi",
 
-Saturday: "Kwame"
-    },
+    Saturday: "Kwame",
+  },
 
-Female:{
+  Female: {
     Sunday: "Akosua",
 
     Monday: "Adwoa",
@@ -29,24 +39,28 @@ Female:{
 
     Friday: "Afua",
 
-    Saturday: "Ama"
-}
-}
-
+    Saturday: "Ama",
+  },
+};
+// console.log (names["male"]["Tuesday"])
 const year = document.querySelector("input[name=year]");
 const month = document.querySelector("input[name=month]");
-const daySelect = document.getElementById("day");
-const genderSelect = document.getElementById("gender-selector");
-const birthdaySelect = document.getElementById("birthday-selector");
-const genderIndex = document.querySelector(".gender").selectedIndex;
-const gender = document.querySelector(".gender").options;
-
-console.log(gender[genderIndex]);
-
+const day = document.querySelector("input[name=day]");
 function ValidateForm(event) {
   event.preventDefault();
-  const GetDay =
-    (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7;
-  console.log(year.value);
 
+  const century = parseInt(year.value.slice(0, 2));
+  const getyear = parseInt(year.value.slice(2));
+
+  const dayOfWeek =
+    (century / 4 -
+      2 * century -
+      1 +
+      (5 * getyear) / 4 +
+      (26 * (parseInt(month.value) + 1)) / 10 +
+      parseInt(day.value)) %
+    7;
+
+  console.log(dayOfWeek.toFixed());
 }
+// ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
