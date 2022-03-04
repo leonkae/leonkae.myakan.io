@@ -15,7 +15,9 @@ body {
   width: 50%;
   height: 1000px;
   justify-content: center;
+  color:#f4d03f;
   background-color: dodgerblue;
+  background-image: url(images/35eb0592fd376d53b66c1454feebfdf8.jpg);
   font-family: "poppins", sans-serif;
 }
 
@@ -103,3 +105,5 @@ textarea {
 .words span:nth-child(7) {
   animation-delay: 3s;
 }
+
+
