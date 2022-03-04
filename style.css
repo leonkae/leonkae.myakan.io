@@ -27,7 +27,7 @@ body{
 }
 
 .rightside{
-   
+   font-family: 'poppins', sans-serif;
     width: 50%;
     text-align: center;
     padding-top: 50px;
@@ -47,7 +47,7 @@ form span{
     
 }
 button, input, select, textarea{
-    font-family: 'poppins';
+    font-family: 'poppins' sans-serif;
     font-size: 100%;
 } 
 /*
