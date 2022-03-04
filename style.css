@@ -1,53 +1,105 @@
-*{
-    margin: 0%;
-    overflow: hidden;
+* {
+  margin: 0%;
+  overflow: hidden;
 }
-body{
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-.container{
-    display: flex;
-}
-.leftside{
-    width: 50%;
-    height: 1000px;
-    justify-content: center;
-    background-color: dodgerblue;
-    font-family: 'poppins', sans-serif;
+body {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.leftside{
-    text-align: center;
-    padding-top: 300px;
-    padding-bottom: 450PX;
-    font-size: 30px;
+.container {
+  display: flex;
+}
+.leftside {
+  width: 50%;
+  height: 1000px;
+  justify-content: center;
+  background-color: dodgerblue;
+  font-family: "poppins", sans-serif;
 }
 
-.rightside{
-   font-family: 'poppins', sans-serif;
-    width: 50%;
-    text-align: center;
-    padding-top: 50px;
-    font-size: 30px;
+.leftside {
+  text-align: center;
+  padding-top: 300px;
+  padding-bottom: 450px;
+  font-size: 30px;
 }
-.for{
-     border: 3px solid red;
-     border-radius: 20px;
-     background-image: linear-gradient(olive,dodgerblue);
-     height: 370px;
-     width: 400px;
-     margin-left: 280px;
+
+.rightside {
+  font-family: "poppins", sans-serif;
+  width: 50%;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 30px;
+  background: #f4d03f;
+  flex-direction: column;
 }
-form span{
-    display: block;
-    margin: 20px 0;
-    
+
+.for {
+  border: 3px solid red;
+  border-radius: 20px;
+  background-image: linear-gradient(olive, dodgerblue);
+  height: 370px;
+  width: 400px;
+  margin-left: 280px;
 }
-button, input, select, textarea{
-    font-family: 'poppins' sans-serif;
-    font-size: 100%;
-} 
+form span {
+  display: block;
+  margin: 20px 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: "poppins" sans-serif;
+  font-size: 100%;
+}
+
+.words {
+  color: #f4d03f;
+  font-size: 0;
+  line-height: 1.5;
+}
+
+.words span {
+  font-size: 6rem;
+  display: inline-block;
+  animation: move 5s ease-in-out infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-30%, 0);
+  }
+  80% {
+    text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+  }
+  60% {
+    transform: translate(30%, 0);
+  }
+}
+
+.words span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.words span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.words span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.words span:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.words span:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+.words span:nth-child(7) {
+  animation-delay: 3s;
+}
