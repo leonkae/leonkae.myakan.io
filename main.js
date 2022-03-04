@@ -66,6 +66,20 @@ function ValidateForm(event) {
       (26 * (parseInt(month.value) + 1)) / 10 +
       parseInt(day.value)) %
     7;
+    
+    // if (day <=0){
+    //   alert(`invalid`)
+    //   else if (day>=31){ 
+    //     alert (`your aken name is ${akanname}`) 
+    //   }
+    // }
+    //   if (month<=0){
+    //     alert(`invalid`)
+    //     else if(month>=12){
+    //       alert(`invalid`)
+    //     }
+
+    //   }
   const birthDay = days[dayOfWeek.toFixed()];
   const akanname = names[gender][birthDay]
   alert (`your aken name is ${akanname}`)  
