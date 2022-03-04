@@ -33,7 +33,7 @@ body{
     padding-top: 50px;
     font-size: 30px;
 }
-.for{
+/* .for{
      border: 3px solid red;
      border-radius: 20px;
      background-image: linear-gradient(olive,dodgerblue);
@@ -49,7 +49,7 @@ form span{
 button, input, select, textarea{
     font-family: inherit;
     font-size: 100%;
-}
+} */
 /*
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {

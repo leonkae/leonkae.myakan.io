@@ -22,46 +22,31 @@
       </div>
 
       <div class="rightside">
-        <!-- <div class="gender-selector" id="gender-selector">
-                 <label for="gender"> Select you gender</label>
-                 <select  class="gender" name="gender">
-	                <option value="none" selected>Gender</option>
-	                <option value="male">Male</option>
-	                <option value="female">Female</option>
-                </select>
-            </div> -->
-
         <h1>Show a Date Control</h1>
         <div class="form">
-          <form>
+          <form id="form">
             <label>
               birth-year <br />
-              <input type="number" name="year" required  value="1998"/> </label
+              <input type="number" name="year" required value="1998" /> </label
             ><br />
 
             <label>
               birth-month <br />
-              <input type="number" name="month" required  value="5"/> </label
+              <input type="number" name="month" required value="5" /> </label
             ><br />
 
             <label>
               birth-day <br />
-              <input type="number" name="day" required value="5"/> </label
+              <input type="number" name="day" required value="5" /> </label
             ><br />
             <label for="male">male</label>
-            <input type="radio" name="gender" id="male" />
+            <input type="radio" value="male" name="gender" />
             <label for="female">female</label>
-            <input type="radio" name="gender" id="female" />
+            <input type="radio" value="female" name="gender" />
 
-            <button class="submit" onclick="ValidateForm(event)" >submit</button>
+            <button class="submit">submit</button>
           </form>
         </div>
-        <!-- <div class="birthday-selctor" id="birthday-selector"></div>
-            <form>
-                 <label for="birthday">Birthday:</label>
-                 <input type="date" id="birthday" name="birthday">
-              <a href="#" target="blank"><input onclick="ValidateForm(event)" type="submit"></a>
-            </form> -->
       </div>
     </div>
 

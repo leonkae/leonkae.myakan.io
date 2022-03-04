@@ -6,9 +6,9 @@ const days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
-
+// console.log(days[4]);
 const names = {
   male: {
     Sunday: "Kwasi",
@@ -26,7 +26,7 @@ const names = {
     Saturday: "Kwame",
   },
 
-  Female: {
+  female: {
     Sunday: "Akosua",
 
     Monday: "Adwoa",
@@ -42,12 +42,18 @@ const names = {
     Saturday: "Ama",
   },
 };
-// console.log (names["male"]["Tuesday"])
+// console.log(names["male"]["Tuesday"]);
 const year = document.querySelector("input[name=year]");
 const month = document.querySelector("input[name=month]");
-const day = document.querySelector("input[name=day]");
+let day = document.querySelector("input[name=day]");
+const form = document.getElementById("form");
+form.addEventListener("submit", ValidateForm);
+
 function ValidateForm(event) {
   event.preventDefault();
+  const gender = document.querySelector("input[name=gender]:checked").value;
+
+  console.log(gender);
 
   const century = parseInt(year.value.slice(0, 2));
   const getyear = parseInt(year.value.slice(2));
@@ -60,7 +66,8 @@ function ValidateForm(event) {
       (26 * (parseInt(month.value) + 1)) / 10 +
       parseInt(day.value)) %
     7;
-
-  console.log(dayOfWeek.toFixed());
+  const birthDay = days[dayOfWeek.toFixed()];
+  const akanname = names[gender][birthDay]
+  alert (`your aken name is ${akanname}`)  
 }
 // ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
