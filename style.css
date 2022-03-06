@@ -1,6 +1,143 @@
-.container{
+html {
   height: 100%;
 }
+
+body {
+  background-size: cover;
+  background-position: center;
+  margin: 0px;
+  background-color: #636b65;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+/* styles for logo */
+.myakan {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: lowercase;
+  padding: 20px;
+}
+
+@keyframes tipsy {
+  0 {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+.myakan {
+  color: #fffbf1;
+  text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -3px;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin-top: 1%;
+}
+
+.myakan:before,
+.myakan:after {
+  content: "";
+  padding: 0.9em 0.4em;
+  position: absolute;
+  left: 50%;
+  width: 10%;
+  top: 50%;
+  display: block;
+  border: 15px solid red;
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  animation: 10s infinite alternate ease-in-out tipsy;
+}
+
+.myakan:before {
+  border-color: #d9524a dodgerblue rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+.myakan:after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
+  box-shadow: 25px 25px 25px rgba(46, 46, 49, 0.8);
+}
+/* styles for about and Akan generator */
+.column-wrapper {
+  /* border: 3px solid red; */
+  display: flex;
+  padding: 20px;
+  font-size: larger;
+  background-color: #78837a;
+  margin-top: 2%;
+}
+
+.column-wrapper .left-side {
+  flex: 50%;
+  text-align: end;
+  font-family: "Poppins", sans-serif;
+  font-weight: 490;
+  padding: 20px;
+}
+
+.column-wrapper .right-side {
+  flex: 50%;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: larger;
+}
+/*styles for  footer */
+.footer-container {
+  height: 269px;
+}
+
+/* article css */
+.wrapper {
+  animation: scroll 70s linear infinite;
+  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+    #636b65;
+  color: #eee;
+  height: 275px;
+  min-width: 360px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+@keyframes scroll {
+  100% {
+    background-position: 0px -3000px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .wrapper {
+    animation: scroll 200s linear infinite;
+  }
+}
+
+@media (min-width: 670px) {
+  .title {
+    font-size: 5rem;
+  }
+}
+.footer-text{
+  color:#636b65;
+   font-family: "Poppins", sans-serif;
+
+}
+
 
 
 
