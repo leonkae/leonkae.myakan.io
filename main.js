@@ -43,29 +43,48 @@ const names = {
   },
 };
 // console.log(names["male"]["Tuesday"]);
-const year = document.querySelector("input[name=year]");
-const month = document.querySelector("input[name=month]");
-let day = document.querySelector("input[name=day]");
+
 const form = document.getElementById("form");
 form.addEventListener("submit", ValidateForm);
 
 function ValidateForm(event) {
   event.preventDefault();
-  const gender = document.querySelector("input[name=gender]:checked").value;
+  const date = document.querySelector("input[name=date]");
+  // console.log(date.value);
+  if (date.value === "") {
+    alert("We don't know your birthday!!!");
+  }
 
-  console.log(gender);
+  const gender = document.querySelector("input[name=gender]:checked");
+  if (gender === null){
+    alert ("Please select gender!!!");
+  }
+  const convertedDate = new Date(date.value);
 
-  const century = parseInt(year.value.slice(0, 2));
-  const getyear = parseInt(year.value.slice(2));
+    // const akanname = names[gender][birthDate];
+    // alert(`your akan nam*e is ${akanname}`); 
+  const dayOfWeek = days[convertedDate.getDay()]; 
+  // console.log (dayOfWeek)
+  const akanName = names[gender][dayOfWeek];
+  
+  // console.log(days[dayOfWeek]);
 
-  const dayOfWeek =
-    (century / 4 -
-      2 * century -
-      1 +
-      (5 * getyear) / 4 +
-      (26 * (parseInt(month.value) + 1)) / 10 +
-      parseInt(day.value)) %
-    7;
+  
+
+
+  //  console.log(convertedDate.getDay());
+
+  // const century = parseInt(year.value.slice(0, 2));
+  // const getyear = parseInt(year.value.slice(2));
+
+  // const dayOfWeek =
+  //   (century / 4 -
+  //     2 * century -
+  //     1 +
+  //     (5 * getyear) / 4 +
+  //     (26 * (parseInt(month.value) + 1)) / 10 +
+  //     parseInt(day.value)) %
+  //   7;
     
     // if (day <=0){
     //   alert(`invalid`)
@@ -80,8 +99,13 @@ function ValidateForm(event) {
     //     }
 
     //   }
-  const birthDay = days[dayOfWeek.toFixed()];
-  const akanname = names[gender][birthDay]
-  alert (`your aken name is ${akanname}`)  
+  // const birthDay = days[dayOfWeek.toFixed(1)];
+//   const akanname = names[gender][birthDay]
+//   alert (`your akan nam*e is ${akanname}`)  
 }
 // ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
+
+
+
+
+
